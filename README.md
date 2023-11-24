@@ -1,9 +1,46 @@
-# Welcome to your CDK TypeScript project
+# Welcome to your Merkel Tree TypeScript project
 
-You should explore the contents of this project. It demonstrates a CDK app with an instance of a stack (`CdkWorkshopStack`)
-which contains an Amazon SQS queue that is subscribed to an Amazon SNS topic.
+## Get Start
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+1. set your aws account
+2. create access key 
+3. install aws-cli on your local machine
+4. config aws configure and put your access key
+5. install node and cdk in your machine
+6. git clone git@github.com:spidemen/aws-cdk-project.git
+7. cd aws-cdk-project
+8. cdk bootstrap
+9.  cdk synth
+10. cdk deploy 
+
+once you finish test, then you can run  `cdk destroy`
+
+
+Once finish deploy, feel free to go to your aws account to check, is everything correct created.
+
+## local merkel tree teset
+
+we can use merkel tree metadata to test and load it.
+
+and then run command `npm run test`. 
+
+
+## tech consideration   
+
+since I do not have too much time, so I just finish most of part, like upload S3 tree file meta data and create api gate and other aws resource.
+
+storage:  I use S3 bucket since the tree is not frequenctly change, so we dynamic update tree by schedule a cron job like every one minutes, on the other side
+it can push merkel tree data to S3 like every day or every hours.
+
+Scale:  1. tree storage: S3 is good to handle big data store, the only need to optimize the code for dynamic load and update tree in memory.
+        2. QPS: every query retrive data from memory, so it would be super fast. 
+
+
+something to improve: get S3 bucket data and some typescript stuffs. I am not so profession in typescription.
+
+build tree: tree construct is based on metadata.  
+
+
 
 ## Useful commands
 

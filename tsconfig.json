@@ -24,6 +24,7 @@
       "./node_modules/@types"
     ]
   },
+  "include": ["lib/*.ts","data/*","utils/*", "lambda/merkelTree.ts"],
   "exclude": [
     "node_modules",
     "cdk.out"
