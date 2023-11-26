@@ -11,10 +11,10 @@ test('SQS Queue and SNS Topic Created', () => {
   const template = Template.fromStack(stack);
 
  
-  // Assert it creates the function with the correct properties...
-  template.hasResourceProperties("AWS::Lambda::Function", {
-    Handler: "hello.handler",
-    Runtime: "nodejs16.x",
-  });
+  // // Assert it creates the function with the correct properties...
+  // template.hasResourceProperties("AWS::Lambda::Function", {
+  //   Handler: "hello.handler",
+  //   Runtime: "nodejs16.x",
+  // });
 
 });

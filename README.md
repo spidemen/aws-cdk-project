@@ -1,5 +1,15 @@
 # Welcome to your Merkel Tree TypeScript project
 
+
+## API
+
+# Get request to retrieve tree node data
+Endpoint:  retrieve 
+Path param:  index -- the index of node
+
+example:  curl 'https://8l1c2dtfn7.execute-api.ap-northeast-1.amazonaws.com/prod/retrieve?index=1'
+
+
 ## Get Start
 
 1. set your aws account
@@ -9,7 +19,8 @@
 5. install node and cdk in your machine
 6. git clone git@github.com:spidemen/aws-cdk-project.git
 7. cd aws-cdk-project
-8. cdk bootstrap
+8. cd lambda && npm install 
+8. cd ../ && cdk bootstrap
 9.  cdk synth
 10. cdk deploy 
 

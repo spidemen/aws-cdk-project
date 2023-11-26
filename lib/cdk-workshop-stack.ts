@@ -15,13 +15,13 @@ export class CdkWorkshopStack extends Stack {
     const tree = new lambda.Function(this, 'TreeHandler', {
       runtime: lambda.Runtime.NODEJS_16_X,    // execution environment
       code: lambda.Code.fromAsset('lambda'),  // code loaded from "lambda" directory
-      handler: 'tree.handler'                // file is "hello", function is "handler"
+      handler: 'tree.handler'                // file is "tree", function is "handler"
     });
 
     const S3Object = new S3Bucket(this, 'MerkelTree');
-    S3Object.loadMerkelTree();
-    
-     // defines an API Gateway REST API resource backed by our "hello" function.
+   // S3Object.loadMerkelTree();  this should be done in lambda function
+  
+     // defines an API Gateway REST API resource backed by our "tree" function.
     new apigw.LambdaRestApi(this, 'Endpoint', {
       handler: tree
     });
