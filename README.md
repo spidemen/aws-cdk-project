@@ -47,7 +47,7 @@ Scale:  1. tree storage: S3 is good to handle big data store, the only need to o
         2. QPS: every query retrive data from memory, so it would be super fast. 
 
 
-something to improve: get S3 bucket data and some typescript stuffs. I am not so profession in typescription.
+something to improve: get S3 bucket data and some typescript stuffs. I am not so profession in typescript.
 
 build tree: tree construct is based on metadata.  
 

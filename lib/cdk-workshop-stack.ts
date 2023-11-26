@@ -15,7 +15,7 @@ export class CdkWorkshopStack extends Stack {
     const tree = new lambda.Function(this, 'TreeHandler', {
       runtime: lambda.Runtime.NODEJS_16_X,    // execution environment
       code: lambda.Code.fromAsset('lambda'),  // code loaded from "lambda" directory
-      handler: 'tree.handler'                // file is "tree", function is "handler"
+      handler: 'tree.handler',                // file is "tree", function is "handler",
     });
 
     const S3Object = new S3Bucket(this, 'MerkelTree');
